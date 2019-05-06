@@ -15,7 +15,7 @@
     /* body font */
     @font-face {
         font-family: "Alegreya-Regular";
-        src: url("../assets/fonts/Alegreya-Regular.ttf");
+        src: url("../assets/fonts/AlegreyaSans-Regular.ttf");
     }
 /* fonts end */
 
@@ -53,6 +53,7 @@ a{
     margin-left: 5%;
     font-weight: 700;
     font-size: 50px;
+    color:rgb(40, 40, 41);
 }
 
 /* Defaults End */
@@ -99,6 +100,7 @@ a{
 }
 
 #hamburger{
+    position: relative;
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -109,11 +111,15 @@ a{
 }
 
 .hamLine{
+    position: relative;
+    top: 0;
+    right: 0;
     background: rgb(160, 157, 157);
     border-radius: 5px;
     width: 30px;
     margin: 2px;
     height: 5px;
+    transition: 0.5s;
 }
 
 #sidebar{
@@ -201,7 +207,7 @@ a{
 #intro .info .fullname{
     font-size: 100px;
     font-weight: 300;
-    color: rgb(240, 240, 240);
+    color: rgba(209, 209, 209, 0.945);
     display: table;
     margin: 0;
     /* height: 200px; */
@@ -238,10 +244,12 @@ a{
 #exp{
     width: 100%;
     padding-bottom: 5%;
+    padding-top:1%;
 }
 
 #exp #expList{
     display: flex;
+    justify-content: center;
     /* flex-wrap: wrap; */
     margin-left: 10%;
     margin-right: 10%;
@@ -254,7 +262,7 @@ a{
     margin: 1%;
     background: rgb(255, 255, 255);
     padding:1%;
-    flex-basis: 100%;
+    flex-basis: 60%;
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
@@ -275,7 +283,7 @@ a{
 }
 
 #skills h1{
-    color: gold;
+    color: #ddd191;
 }
 
 #skills #skillDiv{
@@ -325,6 +333,108 @@ a{
     background: rgb(175, 175, 177);
 }
 
+#work{
+    width: 100%;
+    padding-bottom: 5%;
+    padding-top:1%;
+}
+
+#work #workDiv{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    margin-left: 10%;
+}
+
+#work #workDiv .workCateg{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#work #workDiv .workCateg .workList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#work #workDiv .workCateg .workList .workItem{
+    margin: 1%;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 570px;
+    height:420px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+
+#work #workDiv .workCateg .workList .workItem .workBlocker{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(41, 41, 40, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle{
+    width: 100%;
+    /* height: 95%; */
+    background: rgba(41, 41, 40, 0.89);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 2%;
+    /* margin: 1%; */
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+    text-align: center;
+    color:rgba(209, 209, 209, 0.945);
+    margin: 2% 0 1% 0;
+    font-size-adjust: inherit;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 2%;
+    /* margin: 1%; */
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 2%;
+    margin: 1%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid rgba(209, 209, 209, 0.945);
+    color: rgba(209, 209, 209, 0.945);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
 
 
 
@@ -343,6 +453,12 @@ a{
     background: rgba(255, 255, 255, 0.473);
     color: rgb(40, 40, 41);
 }
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button:hover {
+    color: rgba(48, 46, 46, 0.74);
+    background: rgb(192, 189, 189);
+}
+
 
 /* Hovers end */
 
@@ -462,6 +578,9 @@ a{
             font-size: 15px;
             font-weight: 600;
         }
+        #exp #expList .expItems{
+            flex-basis: 80%;
+        }
         #skills #skillDiv .skillSize h3{
             font-size: 15px;
         }
@@ -512,6 +631,9 @@ a{
             margin-left: 5%;
             font-weight: 650;
             font-size: 30px;
+        }
+        #exp #expList .expItems{
+            flex-basis: 90%;
         }
     }
 
@@ -569,6 +691,7 @@ a{
             margin: 2%;
             padding:2%;
             font-size: 14px;
+            flex-basis: 100%;
         }
     }
 

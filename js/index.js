@@ -2,6 +2,7 @@ const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 const blocker = document.getElementById('blocker');
 const options = document.getElementsByClassName('options');
+const hamline = document.getElementsByClassName('hamline');
 
 //sections
 var exp = document.querySelector('#exp');
@@ -10,21 +11,28 @@ let open=false;
 
 hamburger.addEventListener("click", function(){
     if(open){
-        hamburger.style.WebkitTransform = "rotate(0deg)"; 
-        // Code for IE9
-        hamburger.style.msTransform = "rotate(0deg)"; 
-        // Standard syntax
-        hamburger.style.transform = "rotate(0deg)"; 
+        // hamburger.style.WebkitTransform = "rotate(0deg)"; 
+        // // Code for IE9
+        // hamburger.style.msTransform = "rotate(0deg)"; 
+        // // Standard syntax
+        // hamburger.style.transform = "rotate(0deg)"; 
+        
+        hamburger.children[0].style.transform = "rotate(0deg)";
+        hamburger.children[2].style.transform = "rotate(0deg)";
+        hamburger.children[0].style.position = "relative";
+        hamburger.children[2].style.position = "relative";
+        hamburger.children[1].style.display = "block";
+
         sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
         open=false;
     }else{
-        hamburger.style.WebkitTransform = "rotate(90deg)"; 
-        // Code for IE9
-        hamburger.style.msTransform = "rotate(90deg)"; 
-        // Standard syntax
-        hamburger.style.transform = "rotate(90deg)"; 
+        hamburger.children[1].style.display = "none";
+        hamburger.children[0].style.transform = "rotate(45deg)";
+        hamburger.children[2].style.transform = "rotate(-45deg)";
+        hamburger.children[0].style.position = "absolute";
+        hamburger.children[2].style.position = "absolute";
         sidebar.style.right = 0;
         sidebar.style.visibility = "visible";
         blocker.style.display = "block";
@@ -33,11 +41,11 @@ hamburger.addEventListener("click", function(){
 });
 
 function optionFunc(){
-    hamburger.style.WebkitTransform = "rotate(0deg)"; 
-    // Code for IE9
-    hamburger.style.msTransform = "rotate(0deg)"; 
-    // Standard syntax
-    hamburger.style.transform = "rotate(0deg)"; 
+    hamburger.children[0].style.transform = "rotate(0deg)";
+    hamburger.children[2].style.transform = "rotate(0deg)";
+    hamburger.children[0].style.position = "relative";
+    hamburger.children[2].style.position = "relative";
+    hamburger.children[1].style.display = "block";
     sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
@@ -49,11 +57,11 @@ for (var i = 0; i < options.length; i++) {
 }
 
 blocker.addEventListener("click", function(){
-    hamburger.style.WebkitTransform = "rotate(0deg)"; 
-    // Code for IE9
-    hamburger.style.msTransform = "rotate(0deg)"; 
-    // Standard syntax
-    hamburger.style.transform = "rotate(0deg)"; 
+    hamburger.children[0].style.transform = "rotate(0deg)";
+    hamburger.children[2].style.transform = "rotate(0deg)";
+    hamburger.children[0].style.position = "relative";
+    hamburger.children[2].style.position = "relative";
+    hamburger.children[1].style.display = "block";
     sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
@@ -65,11 +73,11 @@ function resizeFunc() {
     var w = window.outerWidth;
     var h = window.outerHeight;
     if(w>=1024){
-        hamburger.style.WebkitTransform = "rotate(0deg)"; 
-        // Code for IE9
-        hamburger.style.msTransform = "rotate(0deg)"; 
-        // Standard syntax
-        hamburger.style.transform = "rotate(0deg)";
+        hamburger.children[0].style.transform = "rotate(0deg)";
+        hamburger.children[2].style.transform = "rotate(0deg)";
+        hamburger.children[0].style.position = "relative";
+        hamburger.children[2].style.position = "relative";
+        hamburger.children[1].style.display = "block";
         sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
