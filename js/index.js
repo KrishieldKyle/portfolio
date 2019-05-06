@@ -1,6 +1,7 @@
 const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 const blocker = document.getElementById('blocker');
+const options = document.getElementsByClassName('options');
 
 let open=false;
 
@@ -21,13 +22,26 @@ hamburger.addEventListener("click", function(){
         // Standard syntax
         hamburger.style.transform = "rotate(90deg)"; 
         sidebar.style.right = 0;
-        sidebar.style.display = "flex";
+        sidebar.style.visibility = "visible";
         blocker.style.display = "block";
         open=true;
     }
-    
-
 });
+
+function optionFunc(){
+    hamburger.style.WebkitTransform = "rotate(0deg)"; 
+    // Code for IE9
+    hamburger.style.msTransform = "rotate(0deg)"; 
+    // Standard syntax
+    hamburger.style.transform = "rotate(0deg)"; 
+    sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
+    blocker.style.display = "none";
+    open=false;
+}
+
+for (var i = 0; i < options.length; i++) {
+    options[i].addEventListener('click', optionFunc, false);
+}
 
 blocker.addEventListener("click", function(){
     hamburger.style.WebkitTransform = "rotate(0deg)"; 

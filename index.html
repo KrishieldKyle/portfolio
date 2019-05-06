@@ -8,19 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <title>Welcome To My Portfolio</title>
+    <title>Krishield Kyle Santoyo</title>
 </head>
 <body onresize="resizeFunc()">
     <nav id="navbar">
         <a href="#intro" id="headTitle">Welcome To My Portfolio</a>
         <div class="spacer"></div>
         <div id="navOptions">
-                <a href="#intro">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#education">Educational Background</a>
-                <a href="#exp">Experiences</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">My Work</a>
+            <a href="#intro" class="options">Home</a>
+            <a href="#exp" class="options">Experiences</a>
+            <a href="#skills" class="options">Skills</a>
+            <a href="#work" class="options">My Work</a>
+            <a href="#education" class="options">Educational Background</a>
+            <a href="#about" class="options">About Me</a>
         </div>
         <div id="hamburger">
             <div class="hamLine"></div>
@@ -31,12 +31,12 @@
     <div id="sidebar" class="sidebarOpen">
         <img id="sideAvatar" src="assets/avatar/profile.jpg" alt="Profile">
         <div id="sideNavOptions">
-            <a href="#intro">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#education">Educational Background</a>
-            <a href="#exp">Experiences</a>
-            <a href="#skills">Skills</a>
-            <a href="#work">My Work</a>
+            <a href="#intro" class="options">Home</a>
+            <a href="#exp" class="options">Experiences</a>
+            <a href="#skills" class="options">Skills</a>
+            <a href="#work" class="options">My Work</a>
+            <a href="#education" class="options">Educational Background</a>
+            <a href="#about" class="options">About Me</a>
         </div>
     </div>
     <div id="blocker"></div>
@@ -46,9 +46,51 @@
             <div class="forte">
                 <p>Web Developer</p>
             </div>
-            <div class="spacer"></div>
         </div>
-        
+    </section>
+    <section id="exp">
+        <h1 class="titles">EXPERIENCES</h1>
+        <div id="expList">
+            <div class="expItems">
+                <div class="expTitleDiv">
+                    <p class="expTitle">Intern</p>
+                    <div class="spacer"></div>
+                    <p class="expCompany">Pamzeth Computer Dynamics</p>
+                </div>
+                <p class="expDesc">Handle other clerical task given by the technician. Assist Customers.</p>
+                <div class="spacer"></div>
+                <div class="expTitleDiv">
+                    <div class="spacer"></div>
+                    <p class="expCompany">November, 2014 - February, 2015</p>
+                </div>
+            </div>
+            <div class="expItems">
+                    <div class="expTitleDiv">
+                        <p class="expTitle">Sales Utility Clerk</p>
+                        <div class="spacer"></div>
+                        <p class="expCompany">Star Appliance Center Inc.</p>
+                    </div>
+                <p class="expDesc">Assist Customers to their desired item and also suggest other items. Checking the inventory every end of the day.</p>
+                <div class="spacer"></div>
+                <div class="expTitleDiv">
+                    <div class="spacer"></div>
+                    <p class="expCompany">May, 2016 - August, 2016</p>
+                </div>
+            </div>
+            <div class="expItems">
+                    <div class="expTitleDiv">
+                        <p class="expTitle">Intern</p>
+                        <div class="spacer"></div>
+                        <p class="expCompany">Palm Solutions Inc.</p>
+                    </div>
+                <p class="expDesc">Act as a developer for our operations team. Developing admin dashboard (web site). Attending to external clients to present our product.</p>
+                <div class="spacer"></div>
+                <div class="expTitleDiv">
+                    <div class="spacer"></div>
+                    <p class="expCompany">August, 2018 - November, 2018</p>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="js/index.js"></script>
 </body>

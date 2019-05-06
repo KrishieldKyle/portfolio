@@ -35,10 +35,9 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: aliceblue;
+    background: rgb(217, 231, 231);
     font-family: "Alegreya-Regular", Arial, sans-serif;
 }
-
 
 a{
     text-decoration: none;
@@ -48,6 +47,12 @@ a{
 
 .spacer{
     flex:1;
+}
+
+.titles{
+    margin-left: 5%;
+    font-weight: 700;
+    font-size: 50px;
 }
 
 /* Defaults End */
@@ -111,7 +116,8 @@ a{
 
 #sidebar{
     position: absolute;
-    display: none;
+    display: flex;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
@@ -204,6 +210,10 @@ a{
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
 }
 
+#intro .info .fullname span{
+    color: gold;
+}
+
 #intro .info .forte{
     
     margin-top:5px;
@@ -220,6 +230,39 @@ a{
     padding:20px;
     border-radius: 5px;
     background: rgba(209, 209, 209, 0.945);
+}
+
+#exp{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#exp #expList{
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#exp #expList .expItems{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1%;
+    background: rgb(255, 255, 255);
+    padding:1%;
+    flex-basis: 100%;
+    /* flex: 1; */
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+
+}
+
+#exp #expList .expItems .expTitleDiv{
+    display: flex;
+    font-weight: 700;
 }
 
 
@@ -244,6 +287,28 @@ a{
 /* Media queries start */
 
     /* Max Start */
+    @media (max-width: 1600px) {
+        #intro .info .fullname{
+            font-size: 85px;
+            padding:38px;
+        }
+        #intro .info .forte p{
+            font-size: 45px;
+            padding:18px;
+        }
+        .titles{
+            margin-left: 5%;
+            font-weight: 700;
+            font-size: 48px;
+        }
+    }
+
+    @media (max-width: 1500px) {
+        #exp #expList{
+            flex-wrap: wrap;
+        }
+    }
+
     @media (max-width: 1400px) {
         #navOptions{
             width: 45%;
@@ -258,6 +323,11 @@ a{
         #intro .info .forte p{
             font-size: 40px;
             padding:15px;
+        }
+        .titles{
+            margin-left: 5%;
+            font-weight: 700;
+            font-size: 45px;
         }
     }
 
@@ -280,6 +350,11 @@ a{
         #navOptions{
             width: 52%;
         }
+        .titles{
+            margin-left: 5%;
+            font-weight: 700;
+            font-size: 42px;
+        }
     }
 
     @media (max-width: 1106px) {
@@ -293,6 +368,11 @@ a{
         #intro .info .forte p{
             font-size: 35px;
             padding:13px;
+        }
+        .titles{
+            margin-left: 5%;
+            font-weight: 650;
+            font-size: 38px;
         }
     }
 
@@ -313,7 +393,7 @@ a{
         #sidebar{
             width: 307px;
             right: -317px;
-            display: flex;
+            
         }
     }
 
@@ -339,6 +419,11 @@ a{
             right: -274px;
            
         }
+        .titles{
+            margin-left: 5%;
+            font-weight: 650;
+            font-size: 30px;
+        }
     }
 
     @media (max-width: 550px) {
@@ -354,6 +439,16 @@ a{
         #intro .info .forte p{
             font-size: 18px;
             padding:9px;
+        }
+        .titles{
+            margin-left: 4%;
+            font-weight: 650;
+            font-size: 40px;
+        }
+        #exp #expList .expItems{
+            margin: 2%;
+            padding:2%;
+            font-size: 16px;
         }
     }
 
@@ -371,6 +466,11 @@ a{
             font-size: 15px;
             padding:9px;
         }
+        #exp #expList .expItems{
+            margin: 2%;
+            padding:2%;
+            font-size: 14px;
+        }
     }
 
     @media (max-width: 414px) {
@@ -378,6 +478,11 @@ a{
             width: 248px;
             right: -258px;
            
+        }
+        #exp #expList .expItems{
+            margin: 2%;
+            padding:2%;
+            font-size: 13px;
         }
     }
 
@@ -394,6 +499,11 @@ a{
         #intro .info .forte p{
             font-size: 12px;
             padding:9px;
+        }
+        #exp #expList .expItems{
+            margin: 2%;
+            padding:2%;
+            font-size: 12px;
         }
     }
 
