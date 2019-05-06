@@ -73,6 +73,7 @@ a{
     font-weight: 600;
     padding-left: 5%;
     transition: 0.5s;
+    color: rgb(240, 240, 240);
     font-family: "Acme-Regular", Arial, sans-serif;
 }
 
@@ -94,6 +95,7 @@ a{
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 5px;
+    color: rgb(240, 240, 240);
 }
 
 #hamburger{
@@ -162,6 +164,7 @@ a{
     margin-top: 10px;
     border-radius: 5px;
     transition: 0.5s;
+    color: rgb(240, 240, 240);
 }
 
 #blocker{
@@ -239,7 +242,6 @@ a{
 
 #exp #expList{
     display: flex;
-    justify-content: space-around;
     /* flex-wrap: wrap; */
     margin-left: 10%;
     margin-right: 10%;
@@ -253,7 +255,6 @@ a{
     background: rgb(255, 255, 255);
     padding:1%;
     flex-basis: 100%;
-    /* flex: 1; */
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
@@ -264,6 +265,67 @@ a{
     display: flex;
     font-weight: 700;
 }
+
+#skills{
+    width: 100%;
+    padding-top:1%;
+    padding-bottom: 5%;
+    background: rgb(40, 40, 41);
+    color: rgb(173, 173, 168);
+}
+
+#skills h1{
+    color: gold;
+}
+
+#skills #skillDiv{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    margin-left: 10%;
+    padding: 1%;
+}
+
+#skills #skillDiv .skillCol{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    flex-basis: 100%;
+}
+
+#skills #skillDiv .skillSize{
+    width: 100%;
+}
+
+#skills #skillDiv .skillSize h3{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#skills #skillDiv .loading{
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(131, 131, 128, 0.568);
+}
+
+#skills #skillDiv .loading .progress{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(40, 40, 41);
+    font-weight: 700;
+    height: 100%;
+    font-size: 12px;
+    border-radius: 10px;
+    background: rgb(175, 175, 177);
+}
+
+
 
 
 /* Hovers start */
@@ -395,6 +457,20 @@ a{
             right: -317px;
             
         }
+        #sidebar #sideNavOptions a{
+            padding-top: 13px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        #skills #skillDiv .skillSize h3{
+            font-size: 15px;
+        }
+        #skills #skillDiv .loading .progress{
+            font-size: 10px;
+        }
+        #skills #skillDiv .loading{
+            height: 16px;
+        }
     }
 
     @media (max-width: 730px) {
@@ -402,6 +478,11 @@ a{
             width: 292px;
             right: -302px;
            
+        }
+        #sidebar #sideNavOptions a{
+            padding-top: 13px;
+            font-size: 15px;
+            font-weight: 600;
         }
         #intro .info .fullname{
             font-size: 40px;
@@ -411,6 +492,9 @@ a{
             font-size: 20px;
             padding:10px;
         }
+        #skills #skillDiv{
+            flex-wrap: wrap;
+        }
     }
     
     @media (max-width: 660px) {
@@ -418,6 +502,11 @@ a{
             width: 264px;
             right: -274px;
            
+        }
+        #sidebar #sideNavOptions a{
+            padding-top: 11px;
+            font-size: 15px;
+            font-weight: 600;
         }
         .titles{
             margin-left: 5%;
@@ -431,6 +520,11 @@ a{
             width: 248px;
             right: -258px;
            
+        }
+        #sidebar #sideNavOptions a{
+            padding-top: 11px;
+            font-size: 15px;
+            font-weight: 600;
         }
         #intro .info .fullname{
             font-size: 35px;
@@ -458,6 +552,11 @@ a{
             right: -240px;
            
         }
+        #sidebar #sideNavOptions a{
+            padding-top: 11px;
+            font-size: 15px;
+            font-weight: 600;
+        }
         #intro .info .fullname{
             font-size: 30px;
             padding:10px;
@@ -479,6 +578,11 @@ a{
             right: -258px;
            
         }
+        #sidebar #sideNavOptions a{
+            padding-top: 11px;
+            font-size: 15px;
+            font-weight: 600;
+        }
         #exp #expList .expItems{
             margin: 2%;
             padding:2%;
@@ -491,6 +595,11 @@ a{
             width: 234px;
             right: -244px;
            
+        }
+        #sidebar #sideNavOptions a{
+            padding-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
         }
         #intro .info .fullname{
             font-size: 25px;

@@ -3,6 +3,9 @@ const sidebar = document.getElementById('sidebar');
 const blocker = document.getElementById('blocker');
 const options = document.getElementsByClassName('options');
 
+//sections
+var exp = document.querySelector('#exp');
+
 let open=false;
 
 hamburger.addEventListener("click", function(){
@@ -12,6 +15,7 @@ hamburger.addEventListener("click", function(){
         hamburger.style.msTransform = "rotate(0deg)"; 
         // Standard syntax
         hamburger.style.transform = "rotate(0deg)"; 
+        sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
         open=false;
@@ -34,6 +38,7 @@ function optionFunc(){
     hamburger.style.msTransform = "rotate(0deg)"; 
     // Standard syntax
     hamburger.style.transform = "rotate(0deg)"; 
+    sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
     open=false;
@@ -49,10 +54,12 @@ blocker.addEventListener("click", function(){
     hamburger.style.msTransform = "rotate(0deg)"; 
     // Standard syntax
     hamburger.style.transform = "rotate(0deg)"; 
+    sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
     open=false;
 });
+
 
 function resizeFunc() {
     var w = window.outerWidth;
@@ -63,6 +70,7 @@ function resizeFunc() {
         hamburger.style.msTransform = "rotate(0deg)"; 
         // Standard syntax
         hamburger.style.transform = "rotate(0deg)";
+        sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
         open=false;
@@ -78,3 +86,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Viewport Checker
+// var isInViewport = function (elem) {
+//     var bounding = elem.getBoundingClientRect();
+//     return (
+//         bounding.top >= 0 &&
+//         bounding.left >= 0 &&
+//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// };
+
