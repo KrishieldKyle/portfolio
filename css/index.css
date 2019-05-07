@@ -26,7 +26,7 @@ html{
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body{
@@ -34,7 +34,7 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: rgb(217, 231, 231);
     font-family: "Alegreya-Regular", Arial, sans-serif;
 }
@@ -123,7 +123,7 @@ a{
 }
 
 #sidebar{
-    position: absolute;
+    position: fixed;
     display: flex;
     visibility: hidden;
     flex-direction: column;
@@ -380,7 +380,7 @@ a{
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    background: rgba(41, 41, 40, 0.2);
+    background: rgba(41, 41, 40, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -388,13 +388,18 @@ a{
 
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle{
     width: 100%;
-    /* height: 95%; */
-    background: rgba(41, 41, 40, 0.89);
+    height: 40%;
+    background: rgb(41, 41, 40,0.95);
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-bottom: 2%;
+    transition: height 0.3s ease-in;
     /* margin: 1%; */
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle.is-click{
+    height: 95%;
 }
 
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
@@ -404,6 +409,30 @@ a{
     font-size-adjust: inherit;
     font-size: 25px;
     font-weight: bold;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv{
+    position: relative;
+    opacity: 0;
+    margin: 0;
+    transition: 0.3s ease-in;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv.is-click{
+    margin: 2%;
+    opacity: 1;
+}
+
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+    position: absolute;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: start;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc b{
+    margin-right: 5px;
 }
 
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions{
@@ -427,16 +456,42 @@ a{
     background: transparent;
     cursor: pointer;
     transition: 0.5s;
+    z-index: 1;
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding: 0 2% 0 2%;
+    margin: 1%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid rgba(209, 209, 209, 0.945);
+    color: rgba(209, 209, 209, 0.945);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
 }
 
 
 
 
 
+/* Effects start*/
 
+.show *{
+    opacity: 1;
+    transition: opacity 1000ms;
+}
 
+.hide *{
+    opacity: 0;
+    transition: opacity 1000ms;
+}
 
-
+/* Effects end */
 
 /* Hovers start */
 
@@ -455,6 +510,11 @@ a{
 }
 
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button:hover {
+    color: rgba(48, 46, 46, 0.74);
+    background: rgb(192, 189, 189);
+}
+
+#work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a:hover {
     color: rgba(48, 46, 46, 0.74);
     background: rgb(192, 189, 189);
 }
@@ -482,14 +542,21 @@ a{
     }
 
     @media (max-width: 1500px) {
+        #navOptions{
+            width: 50%;
+        }
         #exp #expList{
             flex-wrap: wrap;
+        }
+        #work #workDiv{
+            width: 90%;
+            margin-left: 5%;
         }
     }
 
     @media (max-width: 1400px) {
         #navOptions{
-            width: 45%;
+            width: 47%;
         }
         #headTitle{
             font-size: 25px;
@@ -508,10 +575,39 @@ a{
             font-size: 45px;
         }
     }
+    @media (max-width: 1319px) {
+        #work #workDiv{
+            width: 95%;
+            margin-left: 2%;
+        }
+    }
+
+    @media (max-width: 1249px) {
+        #work #workDiv .workCateg .workList .workItem{
+            width: 560px;
+            height:410px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 25px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 16px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 40px;
+            padding: 2%;
+            font-size: 15px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 38px;
+            padding: 0 2% 0 2%;
+            font-size: 15px;
+        }
+    }
 
     @media (max-width: 1235px) {
         #navOptions{
-            width: 50%;
+            width: 53%;
         }
         #headTitle{
             font-size: 20px;
@@ -537,7 +633,7 @@ a{
 
     @media (max-width: 1106px) {
         #navOptions{
-            width: 54%;
+            width: 56%;
         }
         #intro .info .fullname{
             font-size: 60px;
@@ -556,7 +652,7 @@ a{
 
     @media (max-width: 1030px) {
         #navOptions{
-            width: 56%;
+            width: 60%;
         }
     }
 
@@ -614,6 +710,28 @@ a{
         #skills #skillDiv{
             flex-wrap: wrap;
         }
+        #work #workDiv .workCateg .workList .workItem{
+            width: 550px;
+            height:400px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 15px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 35px;
+            padding: 2%;
+            font-size: 13px;
+        }
+        
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 33px;
+            padding: 0 2% 0 2%;
+            font-size: 13px;
+        }
     }
     
     @media (max-width: 660px) {
@@ -666,6 +784,26 @@ a{
             padding:2%;
             font-size: 16px;
         }
+        #work #workDiv .workCateg .workList .workItem{
+            width: 530px;
+            height:370px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 18px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 13px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 35px;
+            padding: 2%;
+            font-size: 13px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 33px;
+            padding: 0 2% 0 2%;
+            font-size: 13px;
+        }
     }
 
     @media (max-width: 450px) {
@@ -693,6 +831,30 @@ a{
             font-size: 14px;
             flex-basis: 100%;
         }
+        #work #workDiv{
+            width: 90%;
+            margin-left: 5%;
+        }
+        #work #workDiv .workCateg .workList .workItem{
+            width: 400px;
+            height:300px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 15px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 12px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 30px;
+            padding: 1%;
+            font-size: 10px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 28px;
+            padding: 0 1% 0 1%;
+            font-size: 10px;
+        }
     }
 
     @media (max-width: 414px) {
@@ -710,6 +872,30 @@ a{
             margin: 2%;
             padding:2%;
             font-size: 13px;
+        }
+        #work #workDiv{
+            width: 100%;
+            margin-left: 0;
+        }
+        #work #workDiv .workCateg .workList .workItem{
+            width: 400px;
+            height:300px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 16px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 12px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 30px;
+            padding: 1%;
+            font-size: 10px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 28px;
+            padding: 0 1% 0 1%;
+            font-size: 10px;
         }
     }
 
@@ -736,6 +922,31 @@ a{
             margin: 2%;
             padding:2%;
             font-size: 12px;
+        }
+        #work #workDiv{
+            width: 100%;
+            margin-left: 0;
+        }
+        #work #workDiv .workCateg .workList .workItem{
+            width: 400px;
+            height:300px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle p{
+            font-size: 15px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle .workDescDiv .workDesc{
+            font-size: 12px;
+            margin-bottom:0;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions button{
+            height: 28px;
+            padding: 1%;
+            font-size: 10px;
+        }
+        #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a{
+            height: 26px;
+            padding: 0 1% 0 1%;
+            font-size: 10px;
         }
     }
 

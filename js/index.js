@@ -3,11 +3,24 @@ const sidebar = document.getElementById('sidebar');
 const blocker = document.getElementById('blocker');
 const options = document.getElementsByClassName('options');
 const hamline = document.getElementsByClassName('hamline');
+const detailsBtn = document.getElementsByClassName('detailsBtn');
 
 //sections
 var exp = document.querySelector('#exp');
+var skills = document.querySelector('#skills');
+var work = document.querySelector('#work');
 
 let open=false;
+
+for (var i = 0; i < detailsBtn.length; i++) {
+    detailsBtn[i].addEventListener('click', workDetailsFunc, false);
+}
+
+function workDetailsFunc(el){
+    el.target.parentElement.parentElement.classList.toggle("is-click");
+    el.target.parentElement.parentElement.children[1].classList.toggle("is-click");
+
+}
 
 hamburger.addEventListener("click", function(){
     if(open){
@@ -95,14 +108,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+function fadeIn(el){
+    el.classList.add('show');
+    el.classList.remove('hide');  
+}
+
+function fadeOut(el){
+    el.classList.add('hide');
+    el.classList.remove('show');
+}
+
+window.addEventListener('scroll', function(){
+    // if(isInViewport(exp)){
+    //     fadeIn(exp);
+    // }else{
+    //     fadeOut(exp);
+    // }
+
+    // if(isInViewport(skills)){
+    //     fadeIn(skills);
+    // }else{
+
+    //     fadeOut(skills);
+    // }
+
+    // if(isInViewport(work)){
+    //     fadeIn(work);
+    // }else{
+    //     fadeOut(work);
+    // }
+})
+    
+
 // Viewport Checker
-// var isInViewport = function (elem) {
-//     var bounding = elem.getBoundingClientRect();
-//     return (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// };
+var isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+    // return (
+    //     bounding.top >= 0 &&
+    //     bounding.left >= 0 &&
+    //     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //     bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    // );
+    return (
+        bounding.top >= 0 && bounding.top <= ((window.innerHeight || document.documentElement.clientHeight)/2)
+        ||
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) && bounding.bottom >= ((window.innerHeight || document.documentElement.clientHeight)/2)
+        ||
+        bounding.top < 0 && bounding.bottom >(window.innerHeight || document.documentElement.clientHeight)
+    );
+};
 
