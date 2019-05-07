@@ -80,18 +80,19 @@ a{
 
 #navOptions{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    /* justify-content: space-between; */
     width: 40%;
     padding-right: 5%;
     transition: 0.5s;
 }
 
 #navOptions a{
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: table;
     height: 5%;
+    margin-left: 5%;
     line-height: 280%;
     font-size: 0.9rem;
     font-weight: 600;
@@ -208,7 +209,7 @@ a{
 #intro .info .fullname{
     font-size: 100px;
     font-weight: 300;
-    color: rgba(209, 209, 209, 0.945);
+    color: #d1d1d1f1;
     display: table;
     margin: 0;
     /* height: 200px; */
@@ -383,8 +384,6 @@ a{
     border-radius: 10px;
     background: rgba(41, 41, 40, 0.1);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemTitle{
@@ -476,6 +475,83 @@ a{
     z-index: 1;
 }
 
+#about{
+    width: 100%;
+    padding-top:1%;
+    padding-bottom: 5%;
+    background: rgb(40, 40, 41);
+    color: rgb(173, 173, 168);
+}
+
+#about h1{
+    color: #ddd191;
+}
+
+#about #aboutDiv{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    margin-left: 10%;
+}
+
+#about #aboutDiv #aboutImageDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    width: 40%;
+    margin: auto;
+}
+
+#about #aboutDiv #aboutImageDiv img{
+    border-radius: 50%;
+}
+
+#about #aboutDiv #aboutBioDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#about #aboutDiv #aboutBioDiv #bio{
+    width: 500px;
+    margin: 2%;
+}
+
+#about #aboutDiv #aboutBioDiv #contact{
+    width: 500px;
+    margin: 2%;
+}
+
+#about #aboutDiv #aboutBioDiv #contact h3{
+    margin: 3px;
+}
+
+#about #aboutDiv #aboutBioDiv #contact .contactInfo{
+    border: 1px solid #ddd191;
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 90%;
+}
+
+#about #aboutDiv #aboutBioDiv #contact #social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#about #aboutDiv #aboutBioDiv #contact #social a{
+    margin:3%;
+}
+
+#about #aboutDiv #aboutBioDiv #contact #social a img{
+    width: 40px;
+}
+
 
 
 
@@ -518,6 +594,10 @@ a{
 #work #workDiv .workCateg .workList .workItem .workBlocker .workItemOptions a:hover {
     color: rgba(48, 46, 46, 0.74);
     background: rgb(192, 189, 189);
+}
+
+footer{
+    text-align: center;
 }
 
 
