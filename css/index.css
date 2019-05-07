@@ -140,6 +140,7 @@ a{
     box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.51);
     transition: 0.5s;
     font-family: "Aldrich-Regular", Arial, sans-serif;
+    -webkit-backface-visibility: hidden;
 }
 
 #sidebar #sideAvatar{
