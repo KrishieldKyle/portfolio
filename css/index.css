@@ -58,6 +58,43 @@ a{
 
 /* Defaults End */
 
+/* #imageViewerContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 41, 0.74);
+    z-index: 2000;
+}
+
+#imageViewerContainer #curImage{
+    width: 90%;
+    height: 70%;
+    padding: 1%;
+    margin: 0 auto;
+    background: red;
+}
+
+#imageViewerContainer #curImage #curImageDiv{
+    width: 100%;
+    height: 100%;
+}
+
+#imageViewerContainer #curImage #curImageDiv img{
+    width: 75%;
+}
+
+#imageViewerContainer #slideImage{
+    height: 15%;
+    width: 90%;
+    padding: 1%;
+    margin: 0 auto;
+    background: blue;
+} */
+
+
 #navbar{
     width: 100%;
     height: 70px;
@@ -134,7 +171,7 @@ a{
     bottom: 0;
     width: 300px;
     background: rgba(40, 40, 41);
-    height: calc(100% - 50px);
+    height: 100%;
     z-index: 1000;
     -webkit-box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.51);
     -moz-box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.51);
@@ -177,10 +214,10 @@ a{
 
 #blocker{
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 500;
-    height: calc(100% - 50px);
+    height: 100%;
     bottom: 0;
     background: rgba(40, 40, 41, 0.425);
     
