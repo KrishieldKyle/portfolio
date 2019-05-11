@@ -1,3 +1,4 @@
+const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 const blocker = document.getElementById('blocker');
@@ -100,11 +101,21 @@ function resizeFunc() {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        
         e.preventDefault();
 
+        const pos = document.querySelector(this.getAttribute('href')).style.position;
+        const top = document.querySelector(this.getAttribute('href')).style.top;
+        document.querySelector(this.getAttribute('href')).style.position = 'relative';
+        document.querySelector(this.getAttribute('href')).style.top = `-${navbar.clientHeight}px`;
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'start'
         });
+
+        document.querySelector(this.getAttribute('href')).style.top = top;
+        document.querySelector(this.getAttribute('href')).style.position = pos;
     });
 });
 

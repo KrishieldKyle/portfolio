@@ -96,6 +96,8 @@ a{
 
 
 #navbar{
+    position: fixed;
+    border-bottom: 1px solid black;
     width: 100%;
     height: 70px;
     background: rgb(40, 40, 41);
@@ -171,7 +173,7 @@ a{
     bottom: 0;
     width: 300px;
     background: rgba(40, 40, 41);
-    height: 100%;
+    height: calc(100% - 50px);
     z-index: 1000;
     -webkit-box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.51);
     -moz-box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.51);
@@ -217,7 +219,7 @@ a{
     position: fixed;
     width: 100%;
     z-index: 500;
-    height: 100%;
+    height: calc(100% - 50px);
     bottom: 0;
     background: rgba(40, 40, 41, 0.425);
     
@@ -228,7 +230,7 @@ a{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    height: calc(100% - 70px);
+    height: 100%;
     background: rgba(63, 65, 65, 0.747) url("../assets/img/introbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -736,7 +738,7 @@ footer{
             height: 50px;
         }
         #intro{
-            height: calc(100% - 50px);
+            height: 100%;
         }
     }
 
