@@ -327,6 +327,30 @@ a{
     color: #ddd191;
 }
 
+#skills #skillDescDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    font-size: 25px;
+    margin-left: 10%;
+    padding: 1%;
+}
+
+#skills #skillDescDiv .skillDesc{
+    text-align: start;
+    font-size: 0.8em;
+    margin: 1%;
+    color: rgb(173, 173, 168);
+}
+
+#skills #skillDescDiv i{
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 3%;
+    color: rgb(173, 173, 168);
+}
+
 #skills #skillDiv{
     display: flex;
     flex-direction: row;
@@ -801,6 +825,9 @@ footer{
         }
         #exp #expList .expItems{
             flex-basis: 80%;
+        }
+        #skills #skillDescDiv{
+            font-size: 20px;
         }
         #skills #skillDiv .skillSize h3{
             font-size: 15px;
