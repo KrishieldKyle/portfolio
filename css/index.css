@@ -554,8 +554,8 @@ a{
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    width: 80%;
-    margin-left: 10%;
+    width: 95%;
+    margin:auto;
 }
 
 #about #aboutDiv #aboutImageDiv{
@@ -615,6 +615,27 @@ a{
 
 #about #aboutDiv #aboutBioDiv #contact #social a img{
     width: 40px;
+}
+
+#about #aboutDiv #aboutBioDiv #education{
+    width: 500px;
+    margin: 2%;
+}
+
+#about #aboutDiv #aboutBioDiv #education h3{
+    margin: 3px;
+}
+
+#about #aboutDiv #aboutBioDiv #education h4{
+    margin: 10px 1px 1px 10px;
+    display: inline;
+}
+
+#about #aboutDiv #aboutBioDiv #education .educationInfo{
+    /* border: 1px solid #ddd191; */
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 100%;
 }
 
 
