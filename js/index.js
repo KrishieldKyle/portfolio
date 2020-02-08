@@ -5,6 +5,7 @@ const blocker = document.getElementById('blocker');
 const options = document.getElementsByClassName('options');
 const hamline = document.getElementsByClassName('hamline');
 const detailsBtn = document.getElementsByClassName('detailsBtn');
+const copyRight = document.getElementById('copyRight');
 
 //sections
 var exp = document.querySelector('#exp');
@@ -169,3 +170,4 @@ var isInViewport = function (elem) {
     );
 };
 
+copyRight.innerHTML = `Copyright © ${new Date().getFullYear()}.`;
