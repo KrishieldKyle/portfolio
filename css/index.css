@@ -142,24 +142,55 @@ a{
 #hamburger{
     position: relative;
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-right: 1%;
+    margin-right: 2%;
+    height: 35px;
+    width: 35px;
     cursor: pointer;
     transition: 0.5s;
 }
 
+
 .hamLine{
     position: relative;
-    top: 0;
-    right: 0;
     background: rgb(160, 157, 157);
-    border-radius: 5px;
-    width: 30px;
-    margin: 2px;
     height: 5px;
-    transition: 0.5s;
+    border-radius: 5px;
+    width: 25px;
+    transition: .5s;
+}
+
+.hamLine::before,
+.hamLine::after{
+    content: ' ';
+    position: absolute;
+    background: rgb(160, 157, 157);
+    height: 5px;
+    border-radius: 5px;
+    width: 25px;
+    transition: .5s;
+}
+
+#hamburger.hamburder-open .hamLine{
+    background: transparent;
+}
+
+#hamburger.hamburder-open .hamLine::before{
+    transform: rotate(-45deg);
+}
+
+#hamburger.hamburder-open .hamLine::after{
+    transform: rotate(45deg);
+}
+
+.hamLine::before{
+    /* content: ' '; */
+    transform: translateY(-8px);
+}
+
+.hamLine::after{
+    transform: translateY(8px);
 }
 
 #sidebar{
@@ -663,10 +694,6 @@ a{
 /* Effects end */
 
 /* Hovers start */
-
-#hamburger:hover .hamLine{
-    background: rgb(85, 84, 84);
-}
 
 #sidebar #sideNavOptions a:hover{
     background: rgba(255, 255, 255, 0.473);

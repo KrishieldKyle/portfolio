@@ -32,22 +32,23 @@ hamburger.addEventListener("click", function(){
         // // Standard syntax
         // hamburger.style.transform = "rotate(0deg)"; 
         
-        hamburger.children[0].style.transform = "rotate(0deg)";
-        hamburger.children[2].style.transform = "rotate(0deg)";
-        hamburger.children[0].style.position = "relative";
-        hamburger.children[2].style.position = "relative";
-        hamburger.children[1].style.display = "block";
-
+        // hamburger.children[0].style.transform = "rotate(0deg)";
+        // hamburger.children[2].style.transform = "rotate(0deg)";
+        // hamburger.children[0].style.position = "relative";
+        // hamburger.children[2].style.position = "relative";
+        // hamburger.children[1].style.display = "block";
+        hamburger.classList.remove("hamburder-open");
         sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
         open=false;
     }else{
-        hamburger.children[1].style.display = "none";
-        hamburger.children[0].style.transform = "rotate(45deg)";
-        hamburger.children[2].style.transform = "rotate(-45deg)";
-        hamburger.children[0].style.position = "absolute";
-        hamburger.children[2].style.position = "absolute";
+        // hamburger.children[1].style.display = "none";
+        // hamburger.children[0].style.transform = "rotate(45deg)";
+        // hamburger.children[2].style.transform = "rotate(-45deg)";
+        // hamburger.children[0].style.position = "absolute";
+        // hamburger.children[2].style.position = "absolute";
+        hamburger.classList.add("hamburder-open");
         sidebar.style.right = 0;
         sidebar.style.visibility = "visible";
         blocker.style.display = "block";
@@ -56,11 +57,12 @@ hamburger.addEventListener("click", function(){
 });
 
 function optionFunc(){
-    hamburger.children[0].style.transform = "rotate(0deg)";
-    hamburger.children[2].style.transform = "rotate(0deg)";
-    hamburger.children[0].style.position = "relative";
-    hamburger.children[2].style.position = "relative";
-    hamburger.children[1].style.display = "block";
+    // hamburger.children[0].style.transform = "rotate(0deg)";
+    // hamburger.children[2].style.transform = "rotate(0deg)";
+    // hamburger.children[0].style.position = "relative";
+    // hamburger.children[2].style.position = "relative";
+    // hamburger.children[1].style.display = "block";
+    hamburger.classList.remove("hamburder-open");
     sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
@@ -72,11 +74,12 @@ for (var i = 0; i < options.length; i++) {
 }
 
 blocker.addEventListener("click", function(){
-    hamburger.children[0].style.transform = "rotate(0deg)";
-    hamburger.children[2].style.transform = "rotate(0deg)";
-    hamburger.children[0].style.position = "relative";
-    hamburger.children[2].style.position = "relative";
-    hamburger.children[1].style.display = "block";
+    // hamburger.children[0].style.transform = "rotate(0deg)";
+    // hamburger.children[2].style.transform = "rotate(0deg)";
+    // hamburger.children[0].style.position = "relative";
+    // hamburger.children[2].style.position = "relative";
+    // hamburger.children[1].style.display = "block";
+    hamburger.classList.remove("hamburder-open");
     sidebar.style.visibility = "hidden";
     sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
     blocker.style.display = "none";
@@ -88,11 +91,12 @@ function resizeFunc() {
     var w = window.outerWidth;
     var h = window.outerHeight;
     if(w>=1024){
-        hamburger.children[0].style.transform = "rotate(0deg)";
-        hamburger.children[2].style.transform = "rotate(0deg)";
-        hamburger.children[0].style.position = "relative";
-        hamburger.children[2].style.position = "relative";
-        hamburger.children[1].style.display = "block";
+        // hamburger.children[0].style.transform = "rotate(0deg)";
+        // hamburger.children[2].style.transform = "rotate(0deg)";
+        // hamburger.children[0].style.position = "relative";
+        // hamburger.children[2].style.position = "relative";
+        // hamburger.children[1].style.display = "block";
+        hamburger.classList.remove("hamburder-open");
         sidebar.style.visibility = "hidden";
         sidebar.style.right = `-${sidebar.offsetWidth+10}px`;
         blocker.style.display = "none";
