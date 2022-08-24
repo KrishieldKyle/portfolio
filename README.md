@@ -1,5 +1,5 @@
 # Krishield Kyle Santoyo
 Portfolio Website
 
-[Visit Here](https://krishieldkyle.netlify.com/)
+[Visit Here](https://krishieldkyle.github.io/portfolio/)
 ----------------------------------------------------------
