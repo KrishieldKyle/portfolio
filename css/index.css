@@ -775,6 +775,10 @@ footer{
             font-weight: 700;
             font-size: 45px;
         }
+        #exp #expList{
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     }
     @media (max-width: 1319px) {
         #work #workDiv{
@@ -942,6 +946,11 @@ footer{
         #about #aboutDiv #aboutImageDiv{
             width: 27%;
         }
+
+        #exp #expList{
+            margin-left: 10%;
+            margin-right: 11%;
+        }
     }
     
     @media (max-width: 660px) {
@@ -1020,6 +1029,10 @@ footer{
         #about #aboutDiv #aboutImageDiv{
             width: 35%;
         }
+        #exp #expList{
+            margin-left: 9%;
+            margin-right: 12%;
+        }
     }
 
     @media (max-width: 450px) {
@@ -1073,6 +1086,11 @@ footer{
         }
         #about #aboutDiv #aboutImageDiv{
             width: 36%;
+        }
+
+        #exp #expList{
+            margin-left: 8%;
+            margin-right: 12%;
         }
     }
 
@@ -1169,6 +1187,10 @@ footer{
         }
         #about #aboutDiv #aboutImageDiv{
             width: 40%;
+        }
+        #exp #expList{
+            margin-left: 5%;
+            margin-right: 10%;
         }
     }
 
